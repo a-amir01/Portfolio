@@ -1,6 +1,6 @@
 
 /*if screen is larger than 480px apply these styles*/
-@media screen and (min-width: 3480px){
+@media screen and (min-width: 480px){
  
   /******************************************
     MODAL CUSTOMIZATION
