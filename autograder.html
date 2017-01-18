@@ -3,6 +3,15 @@
   <head> <!--container for meta information about the HTML document itself.-->
     <meta charset="utf-8"> <!--how the page is formatted.-->
     <title> Amir Assad | Software Engineer </title><!--appears in browser tabs and search engine results.-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="css/normalize.css"> <!--link to other files-->
     <link href='https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400italic,700,700italic,800' rel='stylesheet' type='text/css'> <!--well be refering to this in main.cc-->
     <link rel="stylesheet" href="css/main.css"> <!--dont want normalize.css to overwrite our main.css we might override normalize.css-->
@@ -19,8 +28,8 @@
       <nav> <!--semantic element that wraps any type of site navigation.-->
         <ul> <!--unordered list styled with bullet points-->
           <li><a href="index.html" class="selected">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="web/viewer.html?file=Amir-Assad.pdf" target="_blank">Resume</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="Amir-Assad.pdf" target="_blank">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -57,12 +66,34 @@
           Overseen by Faculty Mentor Gary Gillespie.
         </p>
         <div id="project-photos">
-          <a href="img/autograder/WelcomePage.png" target="_blank"><img src="img/autograder/WelcomePage.png" alt="" class="project-photo"></a>
-          <a href="img/autograder/TutorQueueStats1.png" target="_blank"><img src="img/autograder/TutorQueueStats1.png" alt="" class="project-photo"></a>
-          <a href="img/autograder/TutorQueueStats2.png" target="_blank"><img src="img/autograder/TutorQueueStats2.png" alt="" class="project-photo"></a>
-          <a href="img/autograder/TutorQueue.png" target="_blank"><img src="img/autograder/TutorQueue.png" alt="" class="project-photo"></a>
-          <a href="img/autograder/LabCheckoff.png" target="_blank"><img src="img/autograder/LabCheckoff.png" alt="" class="project-photo"></a>
+          <img data-toggle="modal" data-target="#myModal" src="img/autograder/WelcomePage.png" alt="WelcomePage" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/autograder/TutorQueueStats1.png" alt="TutorQueueStats1" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/autograder/TutorQueueStats2.png" alt="TutorQueueStats2" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/autograder/TutorQueue.png" alt="TutorQueue" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/autograder/LabCheckoff.png" alt="LabCheckoff" class="project-photo">
         </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" src="" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            $('#myModal').on('show.bs.modal', function (e) {
+              var image = $(e.relatedTarget).attr('src');
+              $(".img-responsive").attr("src", image);
+            });
+          });
+        </script>
       </section>
     </div>
 

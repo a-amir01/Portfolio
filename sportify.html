@@ -3,6 +3,16 @@
   <head> <!--container for meta information about the HTML document itself.-->
     <meta charset="utf-8"> <!--how the page is formatted.-->
     <title> Amir Assad | Software Engineer </title><!--appears in browser tabs and search engine results.-->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="css/normalize.css"> <!--link to other files-->
     <link href='https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400italic,700,700italic,800' rel='stylesheet' type='text/css'> <!--well be refering to this in main.cc-->
     <link rel="stylesheet" href="css/main.css"> <!--dont want normalize.css to overwrite our main.css we might override normalize.css-->
@@ -19,8 +29,8 @@
       <nav> <!--semantic element that wraps any type of site navigation.-->
         <ul> <!--unordered list styled with bullet points-->
           <li><a href="index.html" class="selected">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="web/viewer.html?file=Amir-Assad.pdf" target="_blank">Resume</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="Amir-Assad.pdf" target="_blank">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -29,11 +39,17 @@
     <div id="wrapper">
       <section>
         <div id="project-logo">
+        <!-- https://github.com/a-amir01/Sportify -->
           <a href="https://www.youtube.com/watch?v=Beh8I48XOAM" target="_blank">
             <p><font size="5">Sportify</font></p>
             <img src="img/sportify/sportify.png" alt="Sportify Application" class="project-logo">
           </a>
-          <p><font size="4">CSE 110 Software Engineering</font></p>
+          <p>
+            <font size="4">CSE 110 Software Engineering</font>
+            <a href="https://github.com/a-amir01/Sportify" target="_blank">
+              <img src="img/github.png" alt="github Logo" class="social-icon">
+            </a>
+          </p>
         </div>
 
         <p><font size="4">Contribution:</font></p>
@@ -42,14 +58,36 @@
         
 
         <p>
-          Sportify is an Android application whose goal is to connect users who are interested in engaging in outdoor activities with other users who share the same interest. Unlike other competing Android-applications like Meet-Up or social networking websites like Facebook, Sportify intends to simply the communication process between users and allow users of the application to join and host outdoor activities with ease.
+          Sportify is an Android application whose goal is to connect users who are interested in engaging in outdoor activities with other users who share the same interest. Unlike other competing Android-applications like Meet-Up or social networking websites like Facebook, Sportify intends to simply the communication process between users and allow users of the application to join and host outdoor activities with ease. 
         </p>
         <div id="project-photos">
-          <a href="img/sportify/login.jpg" target="_blank"><img src="img/sportify/login.jpg" alt="" class="project-photo"></a>
-          <a href="img/sportify/signup.jpg" target="_blank"><img src="img/sportify/signup.jpg" alt="" class="project-photo"></a>
-          <a href="img/sportify/createActivity.jpg" target="_blank"><img src="img/sportify/createActivity.jpg" alt="" class="project-photo"></a>
-          <a href="img/sportify/activityList.jpg" target="_blank"><img src="img/sportify/activityList.jpg" alt="" class="project-photo"></a>
+          <img data-toggle="modal" data-target="#myModal" src="img/sportify/login.jpg" alt="" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/sportify/signup.jpg" alt="" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/sportify/createActivity.jpg" alt="" class="project-photo">
+          <img data-toggle="modal" data-target="#myModal" src="img/sportify/activityList.jpg" alt="" class="project-photo">
         </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" src="" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            $('#myModal').on('show.bs.modal', function (e) {
+              var image = $(e.relatedTarget).attr('src');
+              $(".img-responsive").attr("src", image);
+            });
+          });
+        </script>
       </section>
     </div>
     

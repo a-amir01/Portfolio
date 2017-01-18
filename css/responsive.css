@@ -1,7 +1,15 @@
 
 /*if screen is larger than 480px apply these styles*/
-@media screen and (min-width: 480px){
-  
+@media screen and (min-width: 300px){
+ 
+  /******************************************
+    MODAL CUSTOMIZATION
+  *******************************************/ 
+.img-responsive {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
   /******************************************
     TWO COLUMN LAYOUT
   *******************************************/
@@ -36,7 +44,7 @@
    *this will select the 4th item, 
    *7th item, 10th item, and so on.*/
   #gallery li:nth-child(3n+1){ 
-    clear: left; /*no floating elements allowed to the left side*/
+    clear: left; no floating elements allowed to the left side
   }
 
   /******************************************
@@ -54,6 +62,21 @@
 
 @media screen and (min-width: 660px) {
 
+  /******************************************
+    MODAL CUSTOMIZATION
+  *******************************************/ 
+  .modal-xl {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+
+  }
+
+  .img-responsive {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
   /******************************************
   HEADER
   *******************************************/
@@ -85,7 +108,7 @@
   }
 
   header {
-    border-bottom: 5px solid #599a68;
+    border-bottom: 5px solid #0375EE;
     margin-bottom: 60px;
   }
 
