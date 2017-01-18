@@ -124,17 +124,14 @@ PAGE: PORTOLIO
 
 #gallery { /*gallery as a whole*/
   /*remove the margin & padding*/
-  position: relative;
   margin: 0;
   padding: 0;
   list-style: none; /*no bullet points*/
 }
 
 #gallery li {/*each li in gallery*/
-  display: inline-block;
-  position: relative;
   float: left; /*position elements: side by side*/
-  width: 100%; /*each image will only take up 45% of total 
+  width: 45%; /*each image will only take up 45% of total 
                *width of parent it doesnt matter if in browser or phone
                *45*2 = 90, we have 2 images side-by-side with 
                *10% extra root to use to create space*/
@@ -144,43 +141,11 @@ PAGE: PORTOLIO
   color:  #bdc3c7; /*grey*/
 }
 
-#gallery li:hover span.description {
-  opacity: 1;
-}
-
 #gallery li a p { /*style the paragraphs*/
   margin: 0;
   padding: 5%;
   font-size:  0.75em;
   color: #bdc3c7; /*light grey*/
-}
-
-.description {
-  width: 100%;
-}
-
-span.description {
-  background: rgba(0,0,0,0.5);
-  color: white;
-  cursor: pointer;
-  display: table;
-  height: 150px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 150px;
-  opacity: 0;
-
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-}
-
-span.text-content span {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
 }
 
 /******************************************
@@ -279,25 +244,7 @@ nav a:hover {
 
 }
 
-/*nav a:visited {
-  color: #0375EE;
-}*/
-
 /*links*/
 a {
-  color: #6ab47b;
+  color: #6ab47b; /*green*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

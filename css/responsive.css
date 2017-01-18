@@ -1,6 +1,6 @@
 
 /*if screen is larger than 480px apply these styles*/
-@media screen and (min-width: 300px){
+@media screen and (min-width: 3480px){
  
   /******************************************
     MODAL CUSTOMIZATION
@@ -44,7 +44,7 @@
    *this will select the 4th item, 
    *7th item, 10th item, and so on.*/
   #gallery li:nth-child(3n+1){ 
-    clear: left; no floating elements allowed to the left side
+    clear: left; /*no floating elements allowed to the left side*/
   }
 
   /******************************************
