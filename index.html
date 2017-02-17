@@ -1,55 +1,360 @@
-<!DOCTYPE html> <!--what kind of content to expect in a web page-->
-<html> <!-- root for the HTML document.-->
-  <head> <!--container for meta information about the HTML document itself.-->
-    <meta charset="utf-8"> <!--how the page is formatted.-->
-    <title> Amir Assad | Software Engineer </title><!--appears in browser tabs and search engine results.-->
-    <link rel="stylesheet" href="css/normalize.css"> <!--link to other files-->
-    <link href='https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400italic,700,700italic,800' rel='stylesheet' type='text/css'> <!--well be refering to this in main.cc-->
-    <link rel="stylesheet" href="css/main.css"> <!--dont want normalize.css to overwrite our main.css we might override normalize.css-->
-    <link rel="stylesheet" href="css/responsive.css"><!--responsive web design-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+<!DOCTYPE html>
+<html class="no-js">
 
-  <body> <!--content and remaining structure of the document.-->
-    <header> <!--structure the content.-->
-      <a href="index.html" id="logo"> <!--anchor: allows for two HTML pages to be linked together. href = hyperlink-->
-      <h1>Amir Assad</h1>
-      <h2>Software Engineer</h2>
-      </a>
-      <nav> <!--semantic element that wraps any type of site navigation.-->
-        <ul> <!--unordered list styled with bullet points-->
-          <!-- <li><a href="index.html" class="selected">Portfolio</a></li> -->
-          <li><a href="index.html">Portfolio</a></li>
-          <li><a href="about.html" >About</a></li>
-          <li><a href="Amir-Assad.pdf" target="_blank">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div id="wrapper">
-      <section> <!--break up logical groupings of information-->
-        <ul id="gallery">
-          <li> 
-            <a href="autograder.html">
-              <img src="img/autograder/autograder.png" alt="Autograder">
-              <p align="center"><font size="5">Autograder</font></p>
-            </a>
-          </li>
-          <li> 
-            <a href="sportify.html"> 
-              <figure><img src="img/sportify/sportify.png" alt="Sportify"></figure>
-              <p align="center"><font size="5">Sportify</font></p>
-            </a>
-          </li>
-        </ul>
-      </section>
+    <title>Amir Assad | Software Engineer</title>
 
-      <footer> <!--It represents the bottom of a content area.-->
-        <a href="https://github.com/a-amir01" target="_blank"><img src="img/github.png" alt="github Logo" class="social-icon"></a>
-        <a href="https://www.linkedin.com/in/amir-assad-28a602b0" target="_blank"><img src="img/linkedin.png" alt="linkedin Logo" class="social-icon"></a>
-        <p>&copy; 2015 Amir Assad.</p>
-      </footer>
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap and Font Awesome css -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme stylesheet -->
+    <link href="css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- Custom stylesheet - for your changes -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- owl carousel css -->
+
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <!-- CSS Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Mordernizr -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <!-- Responsivity for older IE -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand scrollTo" href="#about">Amir Assad</a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navigation">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a>
+                    <li><a href="#references">My work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="Amir-Assad.pdf" target="_blank" class="external">Resume</a></li>
+                </ul>
+
+            </div>
+
+
+            <!--/.nav-collapse -->
+
+        </div>
     </div>
-  </body>
+    <!-- /#navbar -->
+
+    <!-- *** NAVBAR END *** -->
+
+
+    <div id="all">
+
+        <!-- *** ABOUT ***
+_________________________________________________________ -->
+        <div class="section" id="about">
+               <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big" data-animate="bounceIn">
+                        <img src="img/amir.jpg" class="image img-circle img-responsive" alt="Amir Assad">
+                </div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <h2 class="title" data-animate="fadeInDown">About me</h2>
+                    </div>
+
+                    <div class="col-sm-12 text-left" >
+
+                        <p>
+                           Hello my name is Amir Assad. I am an undergradute student 
+                           attending UCSD pursuing a degree in Computer Science (B.S). My goals are to get more experience in a real working enviroment as well as furthur my knowledge in programming.
+                        </p>
+                        <p>
+                            I enjoy learning new things and taking on new challenges. I like to work on side projects with others. If you have any interesting ideas or would like to collaborate on projects please contact me!
+                        </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- *** ABOUT END *** -->
+
+        <!-- *** REFERENCES IMAGE ***
+_________________________________________________________ -->
+        <div class="section" id="references">
+            <div class="container">
+                <div class="col-sm-12">
+
+                    <div class="mb20">
+                        <h2 class="title" data-animate="fadeInUp">My work</h2>
+
+                        <p class="lead" data-animate="fadeInUp"></p>
+                    </div>
+
+                    <ul id="filter" data-animate="fadeInUp">
+                        <li class="active"><a href="#" data-filter="all">All</a>
+                        </li>
+                        <li><a href="#" data-filter="webdev">Web Dev</a>
+                        </li>
+                        <li><a href="#" data-filter="android">Android</a>
+                        </li>
+                    </ul>
+
+                    <div id="detail">
+
+                        <span class="close">&times;</span> 
+
+                        <div id="detail-slider"></div>
+
+                        <div class="text-center">
+                            <h1 id="detail-title">&nbsp;</h1>
+                        </div>
+
+                        <div id="detail-content"></div>
+
+                    </div>
+                    <!-- Reference detail -->
+
+                    <div id="references-masonry" data-animate="fadeInUp">
+                        <div class="reference-item" data-category="webdev">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/autograder/autograder.png" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">Autograder</h3> 
+                                        <p>Automating Homework assignments and electronic queue</p>
+                                    </div>
+                                </a>
+
+                                <div class="sr-only reference-description" data-images="img/autograder/WelcomePage.png,img/autograder/LabCheckoff.png, img/autograder/TutorQueue.png, img/autograder/TutorQueueStats1.png, img/autograder/TutorQueueStats2.png">
+
+                                    <p>- Integrating <a href="https://theory.stanford.edu/~aiken/moss/" target="_blank">Moss</a> (Measure of software similarity) into Autograder</p>
+                                    <p>- Email notification functionality for students requesting different tasks on Autograder</p>
+                                    <p>- Displaying student and tutor reviews on personal accounts</p>
+
+                                    <p><font size="4">Project components include:</font></p>
+                                    <p>
+                                      - Automatic grading of computer science lab assignments using a distributed test 
+                                        runner with detailed diff reports for errors in student code.
+                                    </p>
+                                    <p>
+                                      - Electronic "help queue" that aids tutor involvement in cse labs and allows 
+                                        instructors to analyze hotspots and downtime in tutoring hours.
+                                    </p>
+                                    <p>
+                                      - Online management of assignment credit and grading including assignment checkoffs, 
+                                        integrated student-grader followup chains, and regrade requests.
+                                    </p>
+                                      Overseen by Faculty Mentor Gary Gillespie.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" href="https://autograder.ucsd.edu/help" target="_blank"><i class="fa fa-globe"></i> Visit Autograder</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reference-item" data-category="android">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/sportify/sportify.png" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">Sportify</h3> 
+                                        <p>An application to connect people with the same physical activity interests</p>
+                                    </div>
+                                </a>
+
+                                <div class="sr-only reference-description" data-images="img/sportify/login.jpg, img/sportify/signup.jpg, img/sportify/createActivity.jpg, img/sportify/activityList.jpg">
+
+                                    <p><font size="4">Contribution:</font></p>
+                                    <p>- Implemented the base code of the project, list view of all the activities, and the filtration of the app.</p>
+                                    <p>- I was recognized twice for the most contributing team member by my teammates.</p>
+        
+
+                                    <p>
+                                        Sportify is an Android application whose goal is to connect users who are interested in engaging in outdoor activities with other users who share the same interest. Unlike other competing Android-applications like Meet-Up or social networking websites like Facebook, Sportify intends to simply the communication process between users and allow users of the application to join and host outdoor activities with ease. 
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=Beh8I48XOAM" target="_blank"><i class="fa fa-video-camera"></i> Watch Demo</a>
+                                        <a class="btn btn-primary" href="https://github.com/a-amir01/Sportify" target="_blank"><i class="fa fa-github"></i> Visit Source Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <!-- /#references-masonry -->
+
+                </div>
+                <!-- /.12 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+
+        <!-- *** REFERENCES END *** -->
+
+
+        <!-- *** CONTACT ***
+_________________________________________________________ -->
+
+        <div class="section contact" id="contact" data-animate="bounceIn">
+            <div class="container">
+                <div class="col-md-12">
+
+
+                    <h2 class="title">Contact me</h2>
+
+                    <div class="row">
+
+                        <div class="col-md-8 col-md-offset-2">
+                            <form id="contact-form" method="post" action="contact.php">
+
+                                <div class="messages">
+
+                                </div>
+
+                                <div class="controls">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" name="name" class="form-control" placeholder="Your firstname *" required="required">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" name="surname" class="form-control" placeholder="Your lastname *" required="required">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" name="email" class="form-control" placeholder="Your email *" required="required">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" name="phone" class="form-control" placeholder="Your phone">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"></textarea>
+                                        </div>
+                                        <div class="col-md-12 text-center">
+                                            <input type="submit" class="btn btn-primary btn-lg" value="Send message">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.12 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+
+        <!-- *** CONTACT END *** -->
+
+        <!-- *** FOOTER ***
+_________________________________________________________ -->
+
+        <div class="section" id="footer">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+
+                        <p class="social">
+                            <a href="https://www.linkedin.com/in/amir-assad-28a602b0" target="_blank" class="external linkedin" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/a-amir01" class="external github" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-github"></i></a>
+                            <a href="mailto:amirassad1373@gmail.com" class="email" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+                            <a href="tel:(805)630-9086"" class="phone" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-phone"></i></a>
+                        </p>
+                    </div>
+                    <!-- /.6 -->
+
+                    <div class="col-sm-6">
+                        <p>&copy; 2017 Amir Assad. All rights reserved.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+
+        <!-- *** FOOTER END *** -->
+
+
+
+    </div>
+    <!-- /#all -->
+
+    <!-- #### JAVASCRIPT FILES ### -->
+
+    <!-- js base -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- for demo purpose -->
+    <script src="js/jquery.cookie.js"></script>
+
+    <!-- waypoints for scroll spy -->
+    <script src="js/waypoints.min.js"></script>
+
+    <!-- masonry layout -->
+    <script src="js/masonry.pkgd.min.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+
+    <!-- jQuery scroll to -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <!-- jQuery counter -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- jQuery parallax -->
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+
+    <!-- main js file -->
+
+    <script src="js/front.js"></script>
+
+</body>
+
 </html>
