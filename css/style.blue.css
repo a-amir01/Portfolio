@@ -48,6 +48,10 @@ NAVBAR
     border-top: solid 5px transparent;
   }
 }
+
+#keeprow {
+  float:left;
+}
 /*
 
 =====================
