@@ -1,0 +1,11 @@
+/*.right.carousel-control, .left.carousel-control {*/
+/*display: none;*/
+/*}*/
+
+.carousel-indicators li {
+    background-color: #222222;
+}
+
+.carousel-indicators .active {
+    background-color: #1350ff;
+}
